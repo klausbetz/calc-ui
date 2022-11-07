@@ -3,7 +3,7 @@
     <dw-page-header>
       Calculator
       <template #append>
-        <dw-btn :to="router.resolveSettings().fullPath">
+        <dw-btn :to="router.resolveSettings().fullPath" class="touch-manipulation">
           <dw-mat-icon variant="two-tone">settings</dw-mat-icon>
         </dw-btn>
       </template>
@@ -12,7 +12,7 @@
       <div class="flex">
         <p class="text-2xl font-bold text-center mt-6 mb-4 flex-1">{{ totalPrice }} €</p>
         <div class="flex items-center">
-          <dw-btn class="grow-0" @click="resetItems" size="xs">
+          <dw-btn class="grow-0 touch-manipulation" @click="resetItems" size="xs">
             <dw-mat-icon variant="round">replay</dw-mat-icon>
           </dw-btn>
         </div>
@@ -41,7 +41,9 @@
       </div>
 
       <div class="grow-0 space-x-1 mt-2">
-        <dw-btn v-for="setting in settings" @click="addItem(setting)" class="mt-1">{{ setting.name }}</dw-btn>
+        <dw-btn v-for="setting in settings" @click="addItem(setting)" class="mt-1 touch-manipulation">
+          {{ setting.name }}
+        </dw-btn>
       </div>
     </main>
   </dw-container>
