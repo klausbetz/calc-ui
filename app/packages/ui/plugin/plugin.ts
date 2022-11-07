@@ -2,31 +2,12 @@ import * as HeadlessUI from '@headlessui/vue'
 import { ErrorMessage, Field, Form } from 'vee-validate'
 import { Plugin } from 'vue'
 import DwBtn from '../buttons/dw-btn.vue'
-import DwCollapse from '../content/dw-collapse.vue'
-import DwModal from '../content/dw-modal.vue'
 import DwPageHeader from '../content/dw-page-header.vue'
-import DwAlert from '../elements/dw-alert.vue'
-import DwBadge from '../elements/dw-badge.vue'
-import DwDataCard from '../elements/dw-data-card.vue'
-import DwLabel from '../elements/dw-label.vue'
-import DwCheckbox from '../form/dw-checkbox.vue'
-import DwCombobox from '../form/dw-combobox.vue'
 import DwInput from '../form/dw-input.vue'
-import DwSelect from '../form/dw-select.vue'
-import DwTextarea from '../form/dw-textarea.vue'
-import DwFileIcon from '../icons/dw-file-icon.vue'
-import DwLoadingIndicator from '../icons/dw-loading-indicator.vue'
-import DwLogoIcon from '../icons/dw-logo-icon.vue'
 import DwMatIcon from '../icons/dw-mat-icon.vue'
-import DwTaskAddIcon from '../icons/dw-task-add-icon.vue'
-import DwTrashIcon from '../icons/dw-trash-icon.vue'
 import DwContainer from '../layout/dw-container.vue'
-import DwLinkOrSpan from '../links/dw-link-or-span.vue'
-import DwLink from '../links/dw-link.vue'
-import DwTertiaryNavigationItem from '../links/dw-tertiary-navigation-item.vue'
-import DwBreadcrumbs from '../navigation/dw-breadcrumbs.vue'
 import DwDataTable from '../tables/data-table/dw-data-table.vue'
-import DwSimpleTable from '../tables/dw-simple-table.vue'
+import DwLink from '../links/dw-link.vue'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
@@ -85,31 +66,12 @@ declare module '@vue/runtime-core' {
     HPortalGroup: typeof HeadlessUI.PortalGroup
 
     DwMatIcon: typeof DwMatIcon
-    DwLogoIcon: typeof DwLogoIcon
-    DwLoadingIndicator: typeof DwLoadingIndicator
-    DwTaskAddIcon: typeof DwTaskAddIcon
-    DwTrashIcon: typeof DwTrashIcon
     DwBtn: typeof DwBtn
-    DwAlert: typeof DwAlert
-    DwBadge: typeof DwBadge
-    DwLabel: typeof DwLabel
     DwInput: typeof DwInput
-    DwTextarea: typeof DwTextarea
-    DwCheckbox: typeof DwCheckbox
-    DwSelect: typeof DwSelect
-    DwCombobox: typeof DwCombobox
     DwContainer: typeof DwContainer
     DwPageHeader: typeof DwPageHeader
     DwLink: typeof DwLink
-    DwLinkOrSpan: typeof DwLinkOrSpan
-    DwTertiaryNavigationItem: typeof DwTertiaryNavigationItem
     DwDataTable: typeof DwDataTable
-    DwSimpleTable: typeof DwSimpleTable
-    DwBreadcrumbs: typeof DwBreadcrumbs
-    DwModal: typeof DwModal
-    DwDataCard: typeof DwDataCard
-    DwFileIcon: typeof DwFileIcon
-    DwCollapse: typeof DwCollapse
   }
 }
 
@@ -173,36 +135,14 @@ export const uiComponents: Plugin = {
       app.component('h-portal-group', HeadlessUI.PortalGroup)
 
       app.component('dw-mat-icon', DwMatIcon)
-      app.component('dw-logo-icon', DwLogoIcon)
-      app.component('dw-task-add-icon', DwTaskAddIcon)
-      app.component('dw-trash-icon', DwTrashIcon)
-      app.component('dw-loading-indicator', DwLoadingIndicator)
-      app.component('dw-file-icon', DwFileIcon)
 
       app.component('dw-btn', DwBtn)
-      app.component('dw-alert', DwAlert)
-      app.component('dw-badge', DwBadge)
-      app.component('dw-label', DwLabel)
+
       app.component('dw-input', DwInput)
-      app.component('dw-textarea', DwTextarea)
-      app.component('dw-checkbox', DwCheckbox)
-      app.component('dw-select', DwSelect)
-      app.component('dw-combobox', DwCombobox)
-      app.component('dw-modal', DwModal)
       app.component('dw-container', DwContainer)
       app.component('dw-page-header', DwPageHeader)
-
       app.component('dw-link', DwLink)
-      app.component('dw-link-or-span', DwLinkOrSpan)
-      app.component('dw-tertiary-navigation-item', DwTertiaryNavigationItem)
-
       app.component('dw-data-table', DwDataTable)
-      app.component('dw-simple-table', DwSimpleTable)
-
-      app.component('dw-breadcrumbs', DwBreadcrumbs)
-
-      app.component('dw-data-card', DwDataCard)
-      app.component('dw-collapse', DwCollapse)
 
       installed = true
     }

@@ -15,7 +15,7 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/:pathMath(.*)*',
-    component: NotFoundPage
+    component: () => NotFoundPage
   }
 ]
 

@@ -35,16 +35,6 @@
           </tr>
         </slot>
 
-        <tr v-if="loading" class="bg-white">
-          <slot name="loading">
-            <td class="px-6 py-4 whitespace-nowrap text-sm font-normal text-gray-500 none" :colspan="tableColumns.length">
-              <div class="flex justify-center">
-                <dw-logo-icon animated class="h-5"></dw-logo-icon>
-              </div>
-            </td>
-          </slot>
-        </tr>
-
         <tr v-if="tableRows.length === 0 && !loading" class="bg-white">
           <slot name="empty">
             <td class="px-6 py-4 whitespace-nowrap text-sm font-normal text-gray-500 select-none" :colspan="tableColumns.length">

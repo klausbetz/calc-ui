@@ -16,8 +16,7 @@
     "types": [
       "vite/client",
       "vue-query",
-      "vitest",
-      "@sentry/vue"
+      "vitest"
     ],
     "lib": [
       "esnext",
