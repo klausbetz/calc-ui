@@ -5,6 +5,7 @@ import { defineConfig } from 'vitest/config'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: 'https://klausbetz.github.io/calc-ui/',
   build: {
     outDir: './dist',
     emptyOutDir: true
