@@ -1,20 +1,20 @@
 <template>
   <dw-container>
     <dw-page-header>
-      <dw-btn :to="router.resolveHome().fullPath" size="xs">
+      <dw-btn :to="router.resolveHome().fullPath" size="xs" class="touch-manipulation">
         <dw-mat-icon>arrow_back</dw-mat-icon>
       </dw-btn>
       &nbsp;
       Einstellungen
 
       <template #append>
-        <dw-btn size="xs" @click="resetSettings">
+        <dw-btn size="xs" @click="resetSettings" class="touch-manipulation">
           <dw-mat-icon variant="round">replay</dw-mat-icon>
         </dw-btn>
       </template>
     </dw-page-header>
     <main>
-      <dw-btn @click="addItem">
+      <dw-btn @click="addItem" class="touch-manipulation">
         <template #leading>
           <dw-mat-icon variant="outlined">add_box</dw-mat-icon>
         </template>
@@ -25,7 +25,7 @@
         <div class="flex" v-for="setting in settingsToWork">
           <dw-input type="text" v-model="setting.name"></dw-input>
           <dw-input type="number" v-model="setting.priceInCents"></dw-input>
-          <dw-btn class="flex-none ml-1" @click="removeItem(setting)">
+          <dw-btn class="flex-none ml-1 touch-manipulation" @click="removeItem(setting)">
             <dw-mat-icon variant="round">remove_circle_outline</dw-mat-icon>
           </dw-btn>
         </div>
