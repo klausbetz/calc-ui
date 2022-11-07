@@ -1,7 +1,7 @@
 <template>
   <dw-container>
     <dw-page-header>
-      <dw-btn :to="router.resolveHome().href" size="xs">
+      <dw-btn :to="router.resolveHome().fullPath" size="xs">
         <dw-mat-icon>arrow_back</dw-mat-icon>
       </dw-btn>
       &nbsp;

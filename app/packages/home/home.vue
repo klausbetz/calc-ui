@@ -3,7 +3,7 @@
     <dw-page-header>
       Calculator
       <template #append>
-        <dw-btn :to="router.resolveSettings().href">
+        <dw-btn :to="router.resolveSettings().fullPath">
           <dw-mat-icon variant="two-tone">settings</dw-mat-icon>
         </dw-btn>
       </template>
