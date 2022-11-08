@@ -21,7 +21,7 @@
         Hinzufügen
       </dw-btn>
 
-      <div class="max-w-[500px] mt-2 space-y-1">
+      <div class="max-w-[500px] mt-2 mb-4 space-y-1">
         <div class="flex" v-for="setting in settingsToWork">
           <dw-input type="text" v-model="setting.name"></dw-input>
           <dw-input type="number" v-model="setting.priceInCents"></dw-input>

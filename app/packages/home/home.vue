@@ -22,7 +22,7 @@
         <div class="absolute top-0 bottom-0 left-0 right-0 overflow-y-auto">
           <dw-data-table hide-pagination :headers="header" :items="items" class="flex-1">
             <template #item:name="{item}">
-              {{ item.lineItem.name }}
+              <span @click="removeSingleItem(item)">{{ item.lineItem.name }}</span>
             </template>
 
             <template #item:count="{item}">
@@ -41,7 +41,7 @@
       </div>
 
       <div class="grow-0 space-x-1 mt-2">
-        <dw-btn v-for="setting in settings" @click="addItem(setting)" class="mt-1 touch-manipulation">
+        <dw-btn v-for="setting in settings" @click="addItem(setting)" class="mt-1 touch-manipulation text-xl" size="xl">
           {{ setting.name }}
         </dw-btn>
       </div>
@@ -111,5 +111,19 @@ function addItem(setting: LineItem) {
 
 function resetItems() {
   items.value = []
+}
+
+function removeSingleItem(item: LineItemCount) {
+  const affectedRow = items.value.find(i => item === i)
+  if (!affectedRow) {
+    return
+  }
+
+  if (affectedRow.count === 1) {
+    items.value.splice(items.value.indexOf(affectedRow), 1)
+    return
+  }
+
+  affectedRow.count--
 }
 </script>

@@ -3,7 +3,7 @@
 git checkout --orphan gh-pages
 
 cd app
-yarn build
+yarn build-production
 cp -R dist ../pages/
 
 git --work-tree ../pages/ add --all
