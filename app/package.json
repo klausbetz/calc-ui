@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
+    "build-production": "vue-tsc --noEmit && vite build --base=/calc-ui/",
     "dev": "vite"
   },
   "dependencies": {
