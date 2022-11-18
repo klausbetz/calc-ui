@@ -44,11 +44,16 @@ const router = useRouter()
 
 function resetSettings() {
   settingsToWork.value = [
-    { name: '🍫', priceInCents: '150' },
-    { name: '🥪🧀', priceInCents: '150' },
-    { name: '🥪🍖', priceInCents: '150' },
-    { name: '🍺', priceInCents: '200' },
-    { name: '🧃', priceInCents: '200' }
+    { name: '🍺', priceInCents: '250' },
+    { name: '🍷💧¼', priceInCents: '200' },
+    { name: '🍷¼', priceInCents: '280' },
+    { name: '🍷⅛', priceInCents: '180' },
+    { name: '💧', priceInCents: '150' },
+    { name: '🧃', priceInCents: '200' },
+    { name: '🍊💧', priceInCents: '150' },
+    { name: '🥪🧀', priceInCents: '180' },
+    { name: '🍫', priceInCents: '100' },
+    { name: '🥂', priceInCents: '250' }
   ]
 }
 
